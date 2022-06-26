@@ -4,7 +4,7 @@ async function loadCsv() {
     const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTpsmdU_Esx3BZPjbRLtK8uVKqcm2-5nMtYzjcuyAWez86H3TlJGFKS2-ooy3e4WuP4FxLjyJJza4H9/pub?gid=0&single=true&output=tsv');
     /*const response = await fetch('knihy.tsv');*/
     const data = await response.text();
-    const table = data.split('\n');/*.slice(1);*/
+    const table = data.split('\n').slice(1);
     
     table.forEach(row => {
         let col = row.split('\t');
