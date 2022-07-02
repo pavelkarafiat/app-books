@@ -34,7 +34,7 @@ function lazyAnimating(){
 
 function processData(books){
     books.reverse();
-    books.sort((a, b) => {return b.precteno - a.precteno});
+    /*books.sort((a, b) => {return b.precteno - a.precteno});*/
     return books;
 }
 
