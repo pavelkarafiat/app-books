@@ -56,7 +56,7 @@ function getOrderedTags(books){
         });
     };
     alltags.sort((a, b) => {return b.count - a.count});
-    alltags=alltags.filter(a=>{return a.count>3});
+    alltags=alltags.filter(a=>{return a.count>1});
     alltags.unshift({tag:'all',count:books.length})
     return alltags;
 }
