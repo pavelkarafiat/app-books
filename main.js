@@ -27,7 +27,8 @@ new Vue({
   methods: {
     async fetchBooks() {
       try {
-        const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTpsmdU_Esx3BZPjbRLtK8uVKqcm2-5nMtYzjcuyAWez86H3TlJGFKS2-ooy3e4WuP4FxLjyJJza4H9/pub?gid=0&single=true&output=tsv');
+        //const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTpsmdU_Esx3BZPjbRLtK8uVKqcm2-5nMtYzjcuyAWez86H3TlJGFKS2-ooy3e4WuP4FxLjyJJza4H9/pub?gid=0&single=true&output=tsv');
+        const response = await fetch('./knihy.tsv');
         if (!response.ok) throw new Error('Network response was not ok');
         const text = await response.text();
         const rows = text.split('\n').slice(1);

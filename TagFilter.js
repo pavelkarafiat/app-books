@@ -1,8 +1,9 @@
 // TagFilter.js
 export default {
   props: ['tags', 'currentFilter'],
-  template: `
-    <div id="menu">
+  template: 
+  /*html*/
+  `<div id="menu">
       <button 
         v-for="tag in tags" 
         :key="tag.tag" 
@@ -10,8 +11,7 @@ export default {
         @click="filterByTag(tag.tag)">
         {{ tag.tag }}: {{ tag.count }}
       </button>
-    </div>
-  `,
+    </div>`,
   methods: {
     filterByTag(tag) {
       this.$emit('filter', tag);
