@@ -1,20 +1,19 @@
 // TagFilter.js
 export default {
   props: ['tags', 'currentFilter'],
-  template: 
-  /*html*/
-  `<div id="menu">
+  template:/*javascript*/`
+  <div id="menu">
       <button 
-        v-for="tag in tags" 
-        :key="tag.tag" 
-        :class="{ 'active': tag.tag === currentFilter }" 
-        @click="filterByTag(tag.tag)">
-        {{ tag.tag }}: {{ tag.count }}
+        v-for="el in tags" 
+        :key="el.tag" 
+        :class="{ 'active': el.tag === currentFilter }" 
+        @click="filterByTag(el.tag)">
+        {{ el.tag }}: {{ el.count }}
       </button>
     </div>`,
   methods: {
-    filterByTag(tag) {
-      this.$emit('filter', tag);
+    filterByTag(el) {
+      this.$emit('filter', el);
     }
   }
 };

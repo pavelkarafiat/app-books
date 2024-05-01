@@ -1,6 +1,7 @@
 export default {
     props: ['data'],
-    template: `
+    
+    template: /*javascript*/`
       <div class="entry-books">
         <img :src="'img/' + data.imglink" :style="{opacity: 0}" @load="handleImageLoad" loading="lazy">
         <div class="years">
@@ -14,6 +15,7 @@ export default {
         </div>
       </div>
     `,
+    
     methods: {
       handleImageLoad(event) {
         event.target.style.opacity = 1;

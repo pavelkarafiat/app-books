@@ -22,7 +22,7 @@ export default {
         return sortedAuthors;
       }
     },
-    template: `
+    template: /*javascript*/`
       <div class="top-authors">
         <h2>Featured Authors</h2>
           <span class="" v-for="author in topAuthors" :key="author.name">

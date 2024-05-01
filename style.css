@@ -12,8 +12,8 @@ h1{
 
 #menu{
     max-width:1200px;
-    margin: 0px auto 50px auto;
-    padding: 10px;
+    margin: 0px auto 10px auto;
+    padding: 30px;
     color: rgb(130,130,130);
 }
 
@@ -117,5 +117,30 @@ img{
     line-height: 1.6;
     text-align: center;
     color: grey;
+}
+
+#search{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+input{
+    font-family: 'Noto Sans', sans-serif;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    background-color: rgb(236, 234, 234);
+    display: inline-block;
+    cursor: pointer;
+    border: 0px;
+    color: rgb(130,130,130);
+    text-align: left;
+}
+
+input:focus {
+    background-color: rgb(243, 241, 241);
+    border: 0px;
+    outline: none;  /* Disables the default focus outline */
+    border: none;   /* Removes the border when the input is focused */
 }
 

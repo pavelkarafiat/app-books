@@ -4,7 +4,8 @@ export default {
         searchQuery: ''
       };
     },
-    template: `
+    template: 
+      /*javascript*/`
       <div class="search-component">
         <input 
           type="text" 
