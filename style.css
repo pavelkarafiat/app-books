@@ -23,6 +23,7 @@ h3{
 }
 
 @media (max-width: 1000px) {
+    h1{font-size: 30px;}
     h2{font-size: 18px;}
     h3{font-size: 14px;}
 }
@@ -36,6 +37,9 @@ h3{
     margin: 0px auto 10px auto;
     padding: 30px;
     color: rgb(130,130,130);
+}
+@media (max-width: 1000px) {
+    #menu{padding: 10px;}
 }
 
 #menu > span{
@@ -62,7 +66,7 @@ h3{
     color: rgb(130,130,130);
 }
 @media (max-width: 1000px) {
-    #menu > button{font-size: 14px;}
+    #menu > button{font-size: 13px;}
 }
 
 .active {
@@ -90,11 +94,13 @@ img{max-width: 270px;}
 
 @media (max-width: 1000px) {
     .entry-books{
-        max-width:160px;
-        padding: 0px 20px 40px 20px;
+        width: 33.3%;
+        padding: 10px;
+        box-sizing: border-box;
     }
-    img {max-width: 160px;}
+    img{max-width: 100%;}
 }
+
 
 .entry-books p{
     margin-top: 0px;
