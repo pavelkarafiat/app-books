@@ -94,7 +94,10 @@ h3{
     padding: 0px 40px 40px 40px;
 }
 
-img{max-width: 270px;}
+.entry-books img{
+    max-width: 270px;
+    cursor: pointer;
+}
 
 @media (max-width: 1000px) {
     .entry-books{
@@ -102,7 +105,7 @@ img{max-width: 270px;}
         padding: 10px;
         box-sizing: border-box;
     }
-    img{max-width: 100%;}
+    .entry-books img{max-width: 100%;}
 }
 
 

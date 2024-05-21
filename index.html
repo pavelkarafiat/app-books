@@ -11,14 +11,19 @@
   <h1>Knihy 1997–2024</h1>
 
   <div id="app">
+    
     <tag-filter :tags="allTags" :current-filter="currentFilter" @filter="setFilter"></tag-filter>
+    
     <div id="search">
       <input type="text" v-model="searchQuery" placeholder="Hledej..." />
     </div>
+    
     <book-detail-modal :book="selectedBook" :visible="showModal" @close="closeModal"></book-detail-modal>
+    
     <div class="container-books">
-    <book-entry v-for="book in filteredBooks" :key="book.imglink" :data="book"></book-entry>
+      <book-entry v-for="book in filteredBooks" :key="book.imglink" :data="book" @open="openModal"></book-entry>
     </div>
+
   </div>
   <script type="module" src="main.js"></script>
 </body>

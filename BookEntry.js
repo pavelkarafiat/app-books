@@ -3,7 +3,7 @@ export default {
     
     template: /*javascript*/`
       <div class="entry-books">
-        <img :src="'img/' + data.imglink" @load="handleImageLoad($event)" loading="lazy" @click="openModal(book)">
+        <img :src="'img/' + data.imglink" @load="handleImageLoad($event)" loading="lazy" @click="openModal(data)">
         <div class="years">
           <span>{{ data.precteno }}</span>
           <span>{{ data.vydano }}</span>
@@ -19,7 +19,10 @@ export default {
     methods: {
       handleImageLoad(event) {
         event.target.style.opacity = 1;
-      }
+      },
+      openModal(el) {
+        this.$emit('open', el);
+      },
     }
   };
   

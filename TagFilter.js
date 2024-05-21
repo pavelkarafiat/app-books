@@ -12,8 +12,8 @@ export default {
       </button>
     </div>`,
   methods: {
-    filterByTag(el) {
-      this.$emit('filter', el);
+    filterByTag(elm) {
+      this.$emit('filter', elm);
     }
   }
 };
