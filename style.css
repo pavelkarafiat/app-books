@@ -131,7 +131,7 @@ input{
     border-radius: 10px;
     background-color: rgb(236, 234, 234);
     display: inline-block;
-    cursor: pointer;
+    cursor:text;
     border: 0px;
     color: rgb(130,130,130);
     text-align: left;
