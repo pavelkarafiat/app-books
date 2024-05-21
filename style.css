@@ -10,6 +10,27 @@ h1{
     cursor: pointer;
 }
 
+h2{
+    margin: 0px 0 5px 0;
+    color: rgb(50,50,50);
+    font-size: 24px;
+}
+h3{
+    margin: 0px 0px 10px 0px;
+    color: rgb(100,100,100);
+    font-weight: 100;
+    font-size: 19px;
+}
+
+@media (max-width: 1000px) {
+    h2{font-size: 18px;}
+    h3{font-size: 14px;}
+}
+
+
+/*--------------------------------------------*/
+/*menu*/
+
 #menu{
     max-width:1200px;
     margin: 0px auto 10px auto;
@@ -19,7 +40,7 @@ h1{
 
 #menu > span{
     padding: 3px 8px;
-    font-size: 1em;
+    font-size: 16px;
     border-radius: 10px;
     background-color: rgb(236, 234, 234);
     display: inline-block;
@@ -31,7 +52,7 @@ h1{
     
     font-family: 'Noto Sans', sans-serif;
     padding: 3px 8px;
-    font-size: 1em;
+    font-size: 16px;
     border-radius: 10px;
     background-color: rgb(236, 234, 234);
     display: inline-block;
@@ -40,10 +61,44 @@ h1{
     border: 0px;
     color: rgb(130,130,130);
 }
+@media (max-width: 1000px) {
+    #menu > button{font-size: 14px;}
+}
 
 .active {
     background-color: #d7194a !important; /* Example: Blue background for active tags */
     color: white !important;
+}
+
+
+/*--------------------------------------------*/
+/*books*/
+
+
+.container-books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.entry-books{
+    max-width:270px;
+    padding: 0px 40px 40px 40px;
+}
+
+img{max-width: 270px;}
+
+@media (max-width: 1000px) {
+    .entry-books{
+        max-width:160px;
+        padding: 0px 20px 40px 20px;
+    }
+    img {max-width: 160px;}
+}
+
+.entry-books p{
+    margin-top: 0px;
+    color: rgb(100,100,100);
 }
 
 .years{
@@ -79,45 +134,19 @@ h1{
 }
 
 
-h2{
-    margin: 0px 0 5px 0;
-    color: rgb(50,50,50);
+/*--------------------------------------------*/
+/*img*/
+
+
+img {
+    opacity: 0; /* Start images as transparent */
+    transition: opacity 1s ease-out; /* Smooth transition to full opacity */
 }
 
-h3{
-    margin: 0px 0px 10px 0px;
-    color: rgb(100,100,100);
-    font-weight: 100;
-}
 
 
-.container-books {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-.entry-books{
-    max-width:270px;
-    padding: 0px 40px 40px 40px;
-}
-
-.entry-books p{
-    margin-top: 0px;
-    color: rgb(100,100,100);
-}
-
-img{
-    max-width:270px;
-}
-
-.top-authors{
-    max-width: 1200px;
-    margin: 60px auto;
-    line-height: 1.6;
-    text-align: center;
-    color: grey;
-}
+/*--------------------------------------------*/
+/*search*/
 
 #search{
     text-align: center;
@@ -148,6 +177,8 @@ input:focus {
 }
 
 
+/*--------------------------------------------*/
+/*modal*/
 
 .modal {
     display: block;
@@ -176,16 +207,9 @@ input:focus {
     font-size: 28px;
     font-weight: bold;
   }
-  
   .close:hover,
   .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-
-
-  img {
-    opacity: 0; /* Start images as transparent */
-    transition: opacity 1s ease-out; /* Smooth transition to full opacity */
-  }
+}
