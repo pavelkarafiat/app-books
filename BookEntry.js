@@ -3,7 +3,7 @@ export default {
     
     template: /*javascript*/`
       <div class="entry-books">
-        <img :src="'img/' + data.imglink" @load="handleImageLoad($event)" loading="lazy">
+        <img :src="'img/' + data.imglink" @load="handleImageLoad($event)" loading="lazy" @click="openModal(book)">
         <div class="years">
           <span>{{ data.precteno }}</span>
           <span>{{ data.vydano }}</span>
