@@ -1,7 +1,6 @@
 // main.js
 import BookEntry from './BookEntry.js';
 import TagFilter from './TagFilter.js';
-import TopAuthors from './TopAuthors.js'; 
 import BookDetailModal from './BookDetailModal.js'; 
 
 // Create a new Vue application using the global Vue instance
@@ -82,7 +81,6 @@ const app = Vue.createApp({
 // Register components
 app.component('book-entry', BookEntry);
 app.component('tag-filter', TagFilter);
-app.component('top-authors', TopAuthors);
 app.component('book-detail-modal', BookDetailModal);
 
 // Mount the app

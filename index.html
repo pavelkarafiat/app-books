@@ -13,7 +13,7 @@
   <div id="app">
     <tag-filter :tags="allTags" :current-filter="currentFilter" @filter="setFilter"></tag-filter>
     <div id="search">
-      <input type="text" v-model="searchQuery" placeholder="Search books..." />
+      <input type="text" v-model="searchQuery" placeholder="Hledej..." />
     </div>
     <book-detail-modal :book="selectedBook" :visible="showModal" @close="closeModal"></book-detail-modal>
     <div class="container-books">

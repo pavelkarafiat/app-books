@@ -127,6 +127,7 @@ img{
 input{
     font-family: 'Noto Sans', sans-serif;
     padding: 10px;
+    padding-left: 20px;
     font-size: 1em;
     border-radius: 10px;
     background-color: rgb(236, 234, 234);
@@ -135,6 +136,8 @@ input{
     border: 0px;
     color: rgb(130,130,130);
     text-align: left;
+    width: 500px;
+    max-width: 80%;
 }
 
 input:focus {
@@ -163,7 +166,7 @@ input:focus {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    /*border: 1px solid #888;*/
     width: 80%;
   }
   
