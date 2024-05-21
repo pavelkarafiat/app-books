@@ -2,6 +2,7 @@
 import BookEntry from './BookEntry.js';
 import TagFilter from './TagFilter.js';
 import TopAuthors from './TopAuthors.js'; 
+import BookDetailModal from './BookDetailModal.js'; 
 
 // Create a new Vue application using the global Vue instance
 const app = Vue.createApp({
@@ -10,7 +11,9 @@ const app = Vue.createApp({
       books: [],
       allTags: [],
       currentFilter: 'all',
-      searchQuery: ''  
+      searchQuery: '',
+      selectedBook: null, // Holds the book object for the modal
+      showModal: false, // Controls visibility of the modal  
     };
   },
   computed: {
@@ -31,8 +34,8 @@ const app = Vue.createApp({
   },
   methods: {
     async fetchBooks() {
-        const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTpsmdU_Esx3BZPjbRLtK8uVKqcm2-5nMtYzjcuyAWez86H3TlJGFKS2-ooy3e4WuP4FxLjyJJza4H9/pub?gid=0&single=true&output=tsv');
-        //const response = await fetch('./knihy.tsv');
+        //const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTpsmdU_Esx3BZPjbRLtK8uVKqcm2-5nMtYzjcuyAWez86H3TlJGFKS2-ooy3e4WuP4FxLjyJJza4H9/pub?gid=0&single=true&output=tsv');
+        const response = await fetch('./knihy.tsv');
         const text = await response.text();
         const rows = text.split('\n').slice(1);
         this.books = rows.map(row => {
@@ -61,6 +64,13 @@ const app = Vue.createApp({
     setFilter(tag) {
       this.currentFilter = tag;
       this.searchQuery = '';
+    },
+    openModal(book) {
+      this.selectedBook = book;
+      this.showModal = true;
+    },
+    closeModal() {
+      this.showModal = false;
     }
   },
   created() {
@@ -73,6 +83,7 @@ const app = Vue.createApp({
 app.component('book-entry', BookEntry);
 app.component('tag-filter', TagFilter);
 app.component('top-authors', TopAuthors);
+app.component('book-detail-modal', BookDetailModal);
 
 // Mount the app
 app.mount('#app');

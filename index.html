@@ -8,15 +8,16 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 </head>
 <body>
-  <h1>Seznam literatury 1997–2024</h1>
+  <h1>Knihy 1997–2024</h1>
 
   <div id="app">
     <tag-filter :tags="allTags" :current-filter="currentFilter" @filter="setFilter"></tag-filter>
     <div id="search">
       <input type="text" v-model="searchQuery" placeholder="Search books..." />
     </div>
+    <book-detail-modal :book="selectedBook" :visible="showModal" @close="closeModal"></book-detail-modal>
     <div class="container-books">
-    <book-entry v-for="book in filteredBooks" :key="book.imglink" :data="book"></book-entry>
+    <book-entry v-for="book in filteredBooks" :key="book.imglink" :data="book" @click="openModal(book)"></book-entry>
     </div>
   </div>
   <script type="module" src="main.js"></script>
